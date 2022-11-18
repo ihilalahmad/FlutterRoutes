@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_routing_nav/screens/screen_2.dart';
+import 'package:flutter_routing_nav/utils/routes_name.dart';
 
 class ScreenOne extends StatefulWidget {
-  static const String id = 'screen_1';
-
   const ScreenOne({Key? key}) : super(key: key);
 
   @override
@@ -25,10 +23,14 @@ class _ScreenOneState extends State<ScreenOne> {
           children: [
             InkWell(
               onTap: (() {
-                Navigator.pushNamed(context, ScreenTwo.id, arguments: {
-                  'name': 'Hilal Ahmad',
-                  'age': 26
-                });
+                Navigator.pushNamed(
+                  context,
+                  RouteName.screenTwo,
+                  arguments: {
+                    'name': 'Hilal ahmad',
+                    'age': 26
+                  }
+                );
                 // Navigator.push(context,
                 //     MaterialPageRoute(builder: (context) => ScreenTwo(
                 //       name: 'Hilal Ahmad',

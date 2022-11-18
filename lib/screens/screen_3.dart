@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ScreenThree extends StatefulWidget {
-  static const String id = 'screen_3';
   const ScreenThree({Key? key}) : super(key: key);
 
   @override
@@ -12,11 +11,10 @@ class _ScreenThreeState extends State<ScreenThree> {
   
   @override
   Widget build(BuildContext context) {
-    final arguments = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          arguments['name']
+          'Screen 3'
         ),
       ),
       body: Padding(
